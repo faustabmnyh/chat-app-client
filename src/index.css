@@ -1,13 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #f9feff;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+a {
+  text-decoration: none;
+}
+
+.text-content {
+  color: rgb(165, 165, 165);
+}
+
+.bg-message {
+  display: flex;
+  padding: 1rem;
+  width: 100%;
+  flex-direction: column;
+  height: 400px;
+  box-sizing: border-box;
+  background: rgb(248, 248, 248);
+  justify-content: flex-end;
+}
+
+.content-message::-webkit-scrollbar {
+  display: none;
+}
+
+.content-message {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.form-input-message {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.form-input-message > .MuiSvgIcon-root {
+  color: #1919ff;
+  margin-left: 10px;
+}
+
+.input-message {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  text-indent: 3px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
+  padding: 5px;
+}
+
+.main-message {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.main-message.from {
+  align-items: center;
+  justify-content: flex-end;
+}
+
+[role="button"] {
+  cursor: pointer;
+}
+
+.user-text:hover {
+  background: rgb(248, 248, 248);
+}
+
+.user-text.active {
+  background: rgb(248, 248, 248);
+}
+
+.message-bubble {
+  padding: 10px;
+  color: black;
+  max-width: 50%;
+  background: rgb(223, 223, 223);
+  border-radius: 20px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.message-bubble.from {
+  color: white;
+  background: #1919ff;
+}
+
+.info-message {
+  display: flex;
+  color: rgb(122, 122, 122);
+  justify-content: center;
+}
+
+.main-message > .MuiSvgIcon-root {
+  font-size: 18px;
+  margin: 0px 10px;
+  color: #1919ff;
+}
+
+.reaction {
+  border-radius: 20px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+  padding: 5px;
+}
+
+.reaction-icon {
+  font-size: 15px !important;
+}
+
+.reaction-icon:hover {
+  font-size: 20px !important;
+}
+
+.reaction-content {
+  position: absolute;
+  display: flex;
+  right: 0;
+  bottom: -17px;
+  z-index: 1;
+  font-size: 14px;
+  width: fit-content;
+  color: black;
+  padding: 3px;
+  background: rgb(223, 223, 223);
+  border-radius: 30px;
+}
+
+.reaction-content.to {
+  left: 0px;
+}
+
